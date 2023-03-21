@@ -25,11 +25,9 @@ public class FeatureService {
         String result = "Title: "+F.get().getFeature_title() + "\n" + "Description" + F.get().getFeature_description();
         return result;
     }
-    public List<String> getStoryByFeatureId(String foreignId){
-        return storyRepository.getStoryByFId(foreignId);
-    }
+
 
     public String getStoryByFId(String id) {
-        return id;
+        return storyRepository.getStoryByFId(id);
     }
 }

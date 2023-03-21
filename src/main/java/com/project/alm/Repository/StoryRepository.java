@@ -15,5 +15,5 @@ public interface StoryRepository extends CrudRepository<Stories, String> {
     List<String> getStoriesFromUserId(@Param("userid")String userId);
 
     @Query(value = "select storyname from stories where features.feature_id = :featureid", nativeQuery = true)
-    List<String> getStoryByFId(@Param("featureid") String featureid);
+    String getStoryByFId(@Param("featureid") String featureid);
 }

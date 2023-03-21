@@ -16,8 +16,7 @@ public class UserController {
 
     @PostMapping("/login")
     public String UserLogin(@RequestBody UserLoginRequest userLoginRequest){
-        String response = userService.getLoginResponse(userLoginRequest);
-        return  response;
+        return userService.getLoginResponse(userLoginRequest);
     }
 
     @GetMapping("/{userid}")
